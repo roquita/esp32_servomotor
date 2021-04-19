@@ -32,14 +32,14 @@ void servo_task(void *arg)
         int angle = 0;
         for (; angle < 180; angle++)
         {
-            //ESP_LOGI(TAG, "angle:%i", angle);
+            ESP_LOGI(TAG, "angle:%i", angle);
             servo_set_pos_by_angle(&servo, angle);
             vTaskDelay(pdMS_TO_TICKS(20));
         }
 
         for (; angle >= 0; angle--)
         {
-            //ESP_LOGI(TAG, "angle:%i", angle);
+            ESP_LOGI(TAG, "angle:%i", angle);
             servo_set_pos_by_angle(&servo, angle);
             vTaskDelay(pdMS_TO_TICKS(20));
         }
